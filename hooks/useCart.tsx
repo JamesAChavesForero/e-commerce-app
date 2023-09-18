@@ -110,6 +110,7 @@ export const CartContextProvider = (props: Props) => {
 
     const handleQtyChange = useCallback((product: CartProductType, increase: boolean) => {
         let updatedCart;
+        console.log()
         if (increase && product.quantity >= 20) {
             toast.success('Cannot buy more than 20')
 

@@ -12,15 +12,15 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-between pt-16 pb-8">
           <FooterList>
             <h3 className="font-bold text-base mb-2">Shop categories</h3>
-            <Link href="#">Phones</Link>
-            <Link href="#">Phones</Link>
-            <Link href="#">Phones</Link>
-            <Link href="#">Phones</Link>
-            <Link href="#">Phones</Link>
+            <Link href="#">Tech</Link>
+            <Link href="#">Clothes</Link>
+            <Link href="#">Accessories</Link>
+            <Link href="#">Shirts</Link>
+            <Link href="#">Gadgtes</Link>
           </FooterList>
           <FooterList>
             <h3 className="font-bold text-base mb-2">Customer Services</h3>
-            <Link href="#">Contact Me</Link>
+            <Link href="#">Contact Us</Link>
             <Link href="#">Shipping Policy</Link>
             <Link href="#">Returns</Link>
             <Link href="#">Exchanges</Link>
@@ -28,7 +28,7 @@ function Footer() {
           </FooterList>
           <FooterList>
             <div className="w-full md:1/3 mb-6 md:mb-0">
-              <h3 className="font-bold text-base mb-2">About Me</h3>
+              <h3 className="font-bold text-base mb-2">About Us</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
@@ -36,7 +36,7 @@ function Footer() {
             </div>
           </FooterList>
           <FooterList>
-            <h3> Follow Me </h3>
+            <h3> Follow Us </h3>
             <div className="flex gap-2">
             <Link href="https://facebook.com"><MdFacebook size={24}/></Link>
             <Link href="#https://twitter.com/iniciarsesion"><AiFillTwitterCircle size={24}/></Link>
