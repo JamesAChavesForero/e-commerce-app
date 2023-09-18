@@ -4,11 +4,12 @@ import { useCart } from "@/hooks/useCart"
 import CartBtn from '../addToCartBtn/CartBtn'
 import Link from 'next/link'
 import CartItemContent from './CartItemContent'
+import toast from "react-hot-toast";
 
 
 
 const Cart = () => {
-  const { cartProducts, setCartVisibility, cartTotalAmount} = useCart()
+  const { cartProducts, setCartVisibility, cartTotalAmount, cleanCart } = useCart()
   return (
     <>
       <div className="absolute inset-0 w-full h-full bg-slate-900 bg-opacity-25 z-10"></div>
@@ -23,7 +24,7 @@ const Cart = () => {
         </div>
         <div>
           {cartProducts && cartProducts.map(item => {
-            return <CartItemContent key={item.id} item={item}/>
+            return <CartItemContent key={item.id} item={item} />
           })}
         </div>
         <div className='border-t-[1.5px] border-slate-200 py-4 flex flex-col justify-between gap-4'>
@@ -32,7 +33,15 @@ const Cart = () => {
             <span> {new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(cartTotalAmount)}</span>
           </div>
           <div>
-            <CartBtn label="Checkout" onClick={() => { }} small />
+            <CartBtn label="Checkout" onClick={() => {
+
+              if (cartProducts?.length > 0) {
+                cleanCart();
+                toast.success('Your Purchase Was Successfull!')
+              }else{
+                toast.error('First Add Items to The Cart')
+              }
+            }} small />
           </div>
           <Link href={"/"} >
             <small className='flex w-full items-center cursor-pointer'> <MdArrowBack className='mx-2' />Continue Shopping</small>
