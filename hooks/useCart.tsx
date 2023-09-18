@@ -1,3 +1,5 @@
+'use client'
+
 import { CartProductType } from "@/app/product/[productId]/ProductDetails";
 import { createContext, useState, useContext, useCallback, useEffect } from "react";
 import toast from "react-hot-toast";
@@ -9,6 +11,7 @@ type CartContextType = {
     cartTotalQty: number
     cartTotalAmount: number,
     products: CartProductType[] | null;
+    setProducts:  (products: CartProductType[]) => void
     cartProducts: CartContextType[] | null;
     addProductToCart: (product: CartProductType) => void
     removeProductFromCart: (product: CartProductType) => void
@@ -135,6 +138,7 @@ export const CartContextProvider = (props: Props) => {
 
     const value = {
         products,
+        setProducts,
         cartTotalQty,
         cartTotalAmount,
         cartProducts,
