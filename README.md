@@ -13,7 +13,7 @@ To get started with this project, follow these simple steps:
  run these commands in a folder where you will run this project
    ```bash
    git clone https://github.com/your-username/endrock-frontend-assessment.git
-   cd endrock-frontend-assessment
+   cd e-commerce-app
    npm install
    npm run dev
 ```
