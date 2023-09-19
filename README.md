@@ -17,6 +17,7 @@ To get started with this project, follow these simple steps:
    npm install
    npm run dev
 ```
+![image](https://github.com/JamesAChavesForero/e-commerce-app/assets/143219390/ed17c5ae-6ff1-46b2-a050-4ebb4e71b79f)
 
 ### Dependencies
 
@@ -37,7 +38,7 @@ Here are some of the key dependencies used in this project:
 
 - The pages are responsive, gracefully adjusting to screens as small as 375px and as large as 1900px and beyond.
 
-- A simple shopping cart with basic functionality is implemented.
+- Shopping cart with requested functionality implemented & available on all pages.
 
 ### Home Page
 
@@ -92,4 +93,8 @@ The web page features a dynamic side cart with the following functionalities:
 I'd like to express my heartfelt gratitude for the opportunity to be considered as a candidate for this role. It would be an honor to be a part of the End Rock team and contribute to sprint missions. I look forward to the possibility of becoming a valuable asset and growing together with the team.
 
 Thank you for your time and consideration!
+
+* here's a picture of my initial planning, thought it looked kind of cool
+
+![WhatsApp Image 2023-09-18 at 5 31 49 PM](https://github.com/JamesAChavesForero/e-commerce-app/assets/143219390/2cd9d892-b28e-461b-b5e5-556371a990c5)
 
