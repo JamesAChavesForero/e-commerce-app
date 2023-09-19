@@ -97,26 +97,29 @@ export const CartContextProvider = (props: Props) => {
     }, []);
 
     const removeProductFromCart = useCallback((product: CartProductType) => {
-
+            console.log(product, cartProducts)
         if (cartProducts) {
             const filteredProducts = cartProducts.filter(item => {
                 return item.id !== product.id
             })
-            toast.error('Product Removed From Cart')
+            console.log(filteredProducts)
             setCartProducts(filteredProducts)
             localStorage.setItem('cartItems', JSON.stringify(filteredProducts))
+            toast.error('Product Removed From Cart')
         }
     }, [cartProducts]);
 
     const handleQtyChange = useCallback((product: CartProductType, increase: boolean) => {
         let updatedCart;
-        console.log()
         if (increase && product.quantity >= 20) {
             toast.success('Cannot buy more than 20')
-
+            return
         } else if (!increase && product.quantity <= 1) {
+            console.log(product)
             removeProductFromCart(product)
+            return
         }
+        
         if (cartProducts) {
             updatedCart = [...cartProducts]
             const existingIndex = cartProducts.findIndex(item => item.id === product.id)
@@ -129,7 +132,7 @@ export const CartContextProvider = (props: Props) => {
             localStorage.setItem('cartItems', JSON.stringify(updatedCart))
         }
 
-    }, [])
+    }, [cartProducts])
 
     const cleanCart = useCallback(() => {
         setCartProducts([])
