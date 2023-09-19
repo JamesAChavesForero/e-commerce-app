@@ -1,10 +1,13 @@
 # End Rock Frontend Assessment
 
 ## Introduction
+![Frame 2](https://github.com/JamesAChavesForero/e-commerce-app/assets/143219390/705ba6f4-36bf-4504-b109-4d2554d42074)
+
 
 I'm James a junior developer looking to learn as much as possible 🤓 while being a valuable and productive part of the team 🖇️ . I have lots of experience but am still in my learning phase and would love guidance and more hands on experience working with a team like the one End Rock is building , hoping to become a 🦾senior🦿 one day and hoping to stick around a long time 🤞.
 
 ## Project Overview
+![Frame 3 (1)](https://github.com/JamesAChavesForero/e-commerce-app/assets/143219390/e4b94e3e-3394-4f39-b315-3f19f15129bd)
 
 ### Installation
 
@@ -17,9 +20,9 @@ To get started with this project, follow these simple steps:
    npm install
    npm run dev
 ```
-![image](https://github.com/JamesAChavesForero/e-commerce-app/assets/143219390/ed17c5ae-6ff1-46b2-a050-4ebb4e71b79f)
 
 ### Dependencies
+![image](https://github.com/JamesAChavesForero/e-commerce-app/assets/143219390/ed17c5ae-6ff1-46b2-a050-4ebb4e71b79f)
 
 Here are some of the key dependencies used in this project:
 
@@ -41,6 +44,7 @@ Here are some of the key dependencies used in this project:
 - Shopping cart with requested functionality implemented & available on all pages.
 
 ### Home Page
+![Frame 4 (2)](https://github.com/JamesAChavesForero/e-commerce-app/assets/143219390/a04cd271-b21f-4908-81a4-8269a6fff5eb)
 
 The home page boasts the following features:
 
@@ -52,6 +56,7 @@ The home page boasts the following features:
 6. The menu and footer are visible on all other pages for seamless navigation.
 
 ### Product Listing Page (PLP)
+![Frame 5](https://github.com/JamesAChavesForero/e-commerce-app/assets/143219390/fbdb4584-4c4e-4a00-8a4d-828c81bd017c)
 
 The product listing page offers:
 
@@ -60,6 +65,8 @@ The product listing page offers:
 3. Clicking on a product redirects you to its specific product detail page.
 
 ### Product Detail Page (PDP)
+![Frame 6 (2)](https://github.com/JamesAChavesForero/e-commerce-app/assets/143219390/7106d8f1-9643-4596-95e6-038bda654515)
+
 
 The product detail page provides:
 
@@ -68,6 +75,7 @@ The product detail page provides:
 3. Clicking the button adds the product to the cart, and the updated side cart opens up.
 
 ### Interactive Side Cart (Component)
+![Frame 7](https://github.com/JamesAChavesForero/e-commerce-app/assets/143219390/06ed399e-30f8-4adf-862a-29505de56fc4)
 
 The web page features a dynamic side cart with the following functionalities:
 
@@ -84,9 +92,11 @@ The web page features a dynamic side cart with the following functionalities:
 - Developed a custom hook with context for efficient data management.
 - Strived for clean code by using interfaces, code normalization, meaningful variable names, logical code structure, and clean coding practices.
 
-### Project Delivery
+### Testing
 
-# I've uploaded the project to my GitHub repository. However, I'd like a bit more time to resolve some minor bugs. In the meantime, I've provided the Git repository link and kindly request a bit more time for debugging.
+![Frame 8](https://github.com/JamesAChavesForero/e-commerce-app/assets/143219390/31d92a43-efa6-48c9-b004-b74d238b7969)
+
+After debugging I realized I had way more time than initial I initially thought I would have I decided to add testing to guarantee product requirements
 
 ## Closing Thoughts
 
