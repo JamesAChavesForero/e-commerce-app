@@ -7,18 +7,20 @@ import Cart from "./components/cart/Cart"
 import { useCart } from "@/hooks/useCart"
 import WhoWeAre from "./components/whoweare/WhoWeAre"
 import { fetchData } from "@/data/productDataHandler";
+import { useEffect } from "react"
 
 
 export default function Home() {
-  const { cartVisibility,products, setProducts} = useCart();
- 
-  fetchData()
-  .then((products) => {
-     setProducts(products);
-  })
-  .catch((error) => {
-    console.error(error.message);
-  });
+  const { cartVisibility, products, setProducts } = useCart();
+  useEffect(() => {
+    fetchData()
+      .then((products) => {
+        setProducts(products);
+      })
+      .catch((error) => {
+        console.error(error.message);
+      });
+  }, [])
 
   return (
     <main className="p-8">

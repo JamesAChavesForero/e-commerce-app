@@ -35,7 +35,7 @@ const Cart = () => {
           <div>
             <CartBtn label="Checkout" onClick={() => {
 
-              if (cartProducts?.length > 0) {
+              if (cartProducts && cartProducts.length > 0) {
                 cleanCart();
                 toast.success('Your Purchase Was Successfull!')
               }else{

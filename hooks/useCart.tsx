@@ -12,7 +12,7 @@ type CartContextType = {
     cartTotalAmount: number,
     products: CartProductType[] | null;
     setProducts:  (products: CartProductType[]) => void
-    cartProducts: CartContextType[] | null;
+    cartProducts: CartContextType[] | null | undefined;
     addProductToCart: (product: CartProductType) => void
     removeProductFromCart: (product: CartProductType) => void
     handleQtyChange: (product: CartProductType, increase: boolean) => void
@@ -76,7 +76,6 @@ export const CartContextProvider = (props: Props) => {
                 const res = await fetch("https://fakestoreapi.com/products")
                 const productsArray = await res.json()
                 setProducts(productsArray)
-                console.log(products, productsArray)
             }
             fakestore()
         }
@@ -97,12 +96,10 @@ export const CartContextProvider = (props: Props) => {
     }, []);
 
     const removeProductFromCart = useCallback((product: CartProductType) => {
-            console.log(product, cartProducts)
         if (cartProducts) {
             const filteredProducts = cartProducts.filter(item => {
                 return item.id !== product.id
             })
-            console.log(filteredProducts)
             setCartProducts(filteredProducts)
             localStorage.setItem('cartItems', JSON.stringify(filteredProducts))
             toast.error('Product Removed From Cart')
@@ -115,7 +112,6 @@ export const CartContextProvider = (props: Props) => {
             toast.success('Cannot buy more than 20')
             return
         } else if (!increase && product.quantity <= 1) {
-            console.log(product)
             removeProductFromCart(product)
             return
         }
