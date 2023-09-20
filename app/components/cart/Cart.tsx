@@ -10,11 +10,11 @@ import toast from "react-hot-toast";
 
 const Cart = () => {
   const { cartProducts, setCartVisibility, cartTotalAmount, cleanCart } = useCart()
-  console.log(cartProducts)
+  
   return (
     <>
-      <div className="absolute inset-0 w-full h-full bg-slate-900 bg-opacity-25 z-10"></div>
-      <aside className="p-4 bg-white absolute top-[60px] right-0 h-screen z-20 md:min-w-[400px] overflow-scroll">
+      <div className="absolute inset-0 w-full min-h-full bg-slate-900 bg-opacity-25 z-10"></div>
+      <aside className="p-4 bg-white absolute top-[60px] right-0 max-h-screen z-20 md:min-w-[400px] overflow-y-scroll rounded-md">
         <IoExit className='cursor-pointer m-2' onClick={() => setCartVisibility(false)} />
         <header className="text-center font-bold pb-4">Shopping Cart</header>
         <div className="flex justify-evenly items-center gap-2">
@@ -44,8 +44,8 @@ const Cart = () => {
               }
             }} small />
           </div>
-          <Link href={"/"} >
-            <small className='flex w-full items-center cursor-pointer'> <MdArrowBack className='mx-2' />Continue Shopping</small>
+          <Link href={"/ProductListing"} >
+            <small className='flex w-full items-center cursor-pointer' onClick={()=>{setCartVisibility(false)}}> <MdArrowBack className='mx-2' />Continue Shopping</small>
           </Link>
         </div>
       </aside>

@@ -8,6 +8,7 @@ import { MdCheckCircle } from "react-icons/md"
 import Cart from "@/app/components/cart/Cart"
 import toast from "react-hot-toast";
 import Image from "next/image"
+import Link from "next/link"
 
 interface ProductDetailsProps {
   product: any
@@ -68,7 +69,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
   }, []);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <div className=""><Image width={400} height={400} src={product?.image} alt={product?.title}/></div>
+      <div className=""><Image width={400} height={400} src={product?.image} alt={product?.title} /></div>
       <div className="flex flex-col gap-1 text-slate-500 text-sm">
         <h2 className="text-3xl font-medium text-slate-700">{product?.title.length > 25 ? product?.title.substring(0, 24) + "..." : product?.title}</h2>
         <hr className="w-[30%] my-2" />
@@ -83,7 +84,9 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
               <span className="">  Product Successfully Added to Cart </span>
             </aside>
             <aside className="max-w-[300px]">
-              <CartBtn label={cartVisibility ? 'Viweing Cart' : 'View Cart'} outline onClick={() => setCartVisibility(!cartVisibility)} />
+              <Link href="#">
+                <CartBtn label={cartVisibility ? 'Viewing Cart' : 'View Cart'} outline onClick={() => setCartVisibility(!cartVisibility)} />
+              </Link>
             </aside>
 
           </> :
@@ -97,7 +100,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
       </div>
       {cartVisibility && <Cart />}
     </div>
- 
+
   )
 }
 export default ProductDetails
