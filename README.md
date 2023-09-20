@@ -92,11 +92,6 @@ The web page features a dynamic side cart with the following functionalities:
 - Developed a custom hook with context for efficient data management.
 - Strived for clean code by using interfaces, code normalization, meaningful variable names, logical code structure, and clean coding practices.
 
-### Testing
-
-![Frame 8](https://github.com/JamesAChavesForero/e-commerce-app/assets/143219390/31d92a43-efa6-48c9-b004-b74d238b7969)
-
-After debugging I realized I had way more time than initial I initially thought I would have I decided to add testing to guarantee product requirements
 
 ## Closing Thoughts
 
