@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 
 const Cart = () => {
   const { cartProducts, setCartVisibility, cartTotalAmount, cleanCart } = useCart()
+  console.log(cartProducts)
   return (
     <>
       <div className="absolute inset-0 w-full h-full bg-slate-900 bg-opacity-25 z-10"></div>

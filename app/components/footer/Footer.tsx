@@ -24,7 +24,7 @@ function Footer() {
             <Link href="#">Shipping Policy</Link>
             <Link href="#">Returns</Link>
             <Link href="#">Exchanges</Link>
-            <Link href="#">FAQ's</Link>
+            <Link href="#">FAQs</Link>
           </FooterList>
           <FooterList>
             <div className="w-full md:1/3 mb-6 md:mb-0">
