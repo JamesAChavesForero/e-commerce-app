@@ -136,7 +136,9 @@ export const CartContextProvider = (props: Props) => {
         localStorage.setItem('cartItems', JSON.stringify(null))
     }, [cartProducts])
 
-    const value = {
+    // pass the values are individual props to avoid error deploying with vercel
+    
+    const value = { 
         products,
         setProducts,
         cartTotalQty,
